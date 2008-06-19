@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="GBK"?>
+
+<!--
+    Document   : SLEHR_xml_sample.xml
+    Created on : 2008年6月5日, 上午10:27
+    Author     : Ma Yichao
+    Description:
+        Purpose of the document follows.
+-->
+
+<SLEHR>
+    <Patient>
+        <jzjl_lb>
+            <jzjl>
+                <jyjcjl id=""></jyjcjl>
+            </jzjl>
+        </jzjl_lb>
+        
+    </Patient>
+    
+</SLEHR>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd" [
+<!ENTITY XCategory "org.log4j.xml.examples.XCategory">
+]>
+
+
+<!-- A sample file demonstrating the configuration of Category and
+     Priority sub-classes.  -->
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+   	<appender name="SimLink" class="org.apache.log4j.ConsoleAppender">
+           <layout class="org.apache.log4j.PatternLayout">
+             <param name="ConversionPattern"
+		    value="%r %d{yyyy-MM-dd HH:mm:ss} %c %p -%m%n"/>
+           </layout>	    
+	</appender>
+
+    <logger name="com.simlink" additivity="false">
+        <level value="DEBUG"/>
+        <appender-ref ref="SimLink"/>
+    </logger>
+
+    <root>
+        <priority value="ERROR"/>
+        <appender-ref ref="SimLink"/>
+    </root>
+</log4j:configuration>
