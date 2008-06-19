@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="GBK"?>
+
+
+
+<MessageCollection>
+    <BugCode abbrev="SLBG">Simlink框架</BugCode>
+    
+    <Detector class="com.simlink.fw.findbugs.plugin.FindServiceSQL">
+        <Details>
+            <![CDATA[
+<p> Service代码中,直接调用SQL语句,会引起扩展性问题.</p>
+]]>
+        </Details>
+    </Detector>
+    <BugPattern type="SIMLINK_SERVICE_SQL">
+        <ShortDescription>在Service中发现SQL语句</ShortDescription>
+        <LongDescription>在Service({1})中发现SQL语句</LongDescription>
+        <Details>
+            <![CDATA[
+<p> Service代码中,直接调用SQL语句,会引起扩展性问题.</p>
+]]>
+        </Details>
+    </BugPattern>
+    
+    
+    <Detector class="com.simlink.fw.findbugs.plugin.FindSysOutPrint">
+        <Details>
+            <![CDATA[
+<p>检查代码中是否使用了System.out.println()</p>
+]]>
+        </Details>
+    </Detector>
+    <BugPattern type="SIMLINK_SYSTEM_OUT_PRINT">
+        <ShortDescription>在代码中使用了System.out.println</ShortDescription>
+        <LongDescription>在代码({1})中使用了System.out.println</LongDescription>
+        <Details>
+            <![CDATA[
+<p> 在代码中使用了System.out.println.应当使用日志方式.如log.info("......")</p>
+]]>
+        </Details>
+    </BugPattern>
+    
+    <Detector class="com.simlink.fw.findbugs.plugin.FindExceptionPrint">
+        <Details>
+            <![CDATA[
+<p>检查代码中是否将异常直接输出.</p>
+]]>
+        </Details>
+    </Detector>
+    <BugPattern type="SIMLINK_EXCEPTION_PRINT">
+        <ShortDescription>在代码中将异常直接输出.</ShortDescription>
+        <LongDescription>在代码({1})中将异常直接输出.</LongDescription>
+        <Details>
+            <![CDATA[
+            <p>代码中将异常直接输出.如ex.printStackTrace().
+            <br>应当使用日志方式.如log.warning("......",ex);
+            </p>
+]]>
+        </Details>
+    </BugPattern>
+    
+</MessageCollection>
+

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="GBK"?>
+
+<!--
+    Document   : findbugs.xml
+    Created on : 2008年5月29日, 上午11:19
+    Author     : Ma Yichao
+    Description:
+        Purpose of the document follows.
+-->
+
+<FindbugsPlugin pluginid="com.simlink.fw.findbugs.plugin"
+                defaultenabled="true"
+                provider="Simlink Framework" >
+    <Detector class="com.simlink.fw.findbugs.plugin.FindServiceSQL" speed="fast" />
+    <BugPattern abbrev="SLBG" type="SIMLINK_SERVICE_SQL" category="CORRECTNESS" />
+    
+    <Detector class="com.simlink.fw.findbugs.plugin.FindSysOutPrint" speed="fast" />
+    <BugPattern abbrev="SLBG" type="SIMLINK_SYSTEM_OUT_PRINT" category="CORRECTNESS" />
+    
+    <Detector class="com.simlink.fw.findbugs.plugin.FindExceptionPrint" speed="fast" />
+    <BugPattern abbrev="SLBG" type="SIMLINK_EXCEPTION_PRINT" category="CORRECTNESS" />
+</FindbugsPlugin>
+
