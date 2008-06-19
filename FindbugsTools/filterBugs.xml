@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="1.3.4" sequence="0" timestamp="1211181987671" analysisTimestamp="1211185606203" release="">
+  <Project filename="&lt;&lt;unnamed project&gt;&gt;" projectName="">
+    <Jar>E:\dev\nbdev\Framework\QATools\FindbugsTools\build\classes</Jar>
+    <SrcDir>E:\dev\nbdev\Framework\QATools\FindbugsTools\src</SrcDir>
+  </Project>
+  <BugInstance type="URF_UNREAD_FIELD" priority="2" abbrev="UrF" category="PERFORMANCE">
+    <Class classname="com.simlink.fw.findbugs.FindBugsFile">
+      <SourceLine classname="com.simlink.fw.findbugs.FindBugsFile" start="21" end="33" sourcefile="FindBugsFile.java" sourcepath="com/simlink/fw/findbugs/FindBugsFile.java"/>
+    </Class>
+    <Field classname="com.simlink.fw.findbugs.FindBugsFile" name="bugList" signature="Ljava/util/ArrayList;" isStatic="false">
+      <SourceLine classname="com.simlink.fw.findbugs.FindBugsFile" sourcefile="FindBugsFile.java" sourcepath="com/simlink/fw/findbugs/FindBugsFile.java"/>
+    </Field>
+    <SourceLine classname="com.simlink.fw.findbugs.FindBugsFile" start="22" end="22" startBytecode="18" endBytecode="18" sourcefile="FindBugsFile.java" sourcepath="com/simlink/fw/findbugs/FindBugsFile.java"/>
+  </BugInstance>
+  <BugInstance type="URF_UNREAD_FIELD" priority="2" abbrev="UrF" category="PERFORMANCE">
+    <Class classname="com.simlink.fw.findbugs.FindBugsFile">
+      <SourceLine classname="com.simlink.fw.findbugs.FindBugsFile" start="21" end="33" sourcefile="FindBugsFile.java" sourcepath="com/simlink/fw/findbugs/FindBugsFile.java"/>
+    </Class>
+    <Field classname="com.simlink.fw.findbugs.FindBugsFile" name="xmlFile" signature="Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="com.simlink.fw.findbugs.FindBugsFile" sourcefile="FindBugsFile.java" sourcepath="com/simlink/fw/findbugs/FindBugsFile.java"/>
+    </Field>
+    <SourceLine classname="com.simlink.fw.findbugs.FindBugsFile" start="21" end="21" startBytecode="7" endBytecode="7" sourcefile="FindBugsFile.java" sourcepath="com/simlink/fw/findbugs/FindBugsFile.java"/>
+  </BugInstance>
+  <Errors>
+    <MissingClass>edu.umd.cs.findbugs.BugReporter</MissingClass>
+    <MissingClass>edu.umd.cs.findbugs.FindBugs</MissingClass>
+    <MissingClass>edu.umd.cs.findbugs.FindBugs2</MissingClass>
+    <MissingClass>edu.umd.cs.findbugs.PackageStats</MissingClass>
+    <MissingClass>edu.umd.cs.findbugs.Project</MissingClass>
+    <MissingClass>edu.umd.cs.findbugs.ProjectStats</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Mon, 19 May 2008 15:26:27 +0800" total_classes="2" total_bugs="2" total_size="39" num_packages="1" cpu_seconds="0.53" clock_seconds="0.50" peak_mbytes="20.53" alloc_mbytes="63.56" gc_seconds="0.01" priority_2="2">
+    <PackageStats package="com.simlink.fw.findbugs" total_bugs="2" total_types="2" total_size="39" priority_2="2">
+      <ClassStats class="com.simlink.fw.findbugs.FindBugsFile" sourceFile="FindBugsFile.java" interface="false" size="12" bugs="2" priority_2="2"/>
+      <ClassStats class="com.simlink.fw.findbugs.FindBugsUtil" sourceFile="FindBugsUtil.java" interface="false" size="27" bugs="0"/>
+    </PackageStats>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>
