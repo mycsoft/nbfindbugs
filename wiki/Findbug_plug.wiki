@@ -1,5 +1,5 @@
 #summary Findbug plug project.
-#labels Phase-Requirements
+#labels Phase-Requirements,Featured
 
 = 介绍 =
 
