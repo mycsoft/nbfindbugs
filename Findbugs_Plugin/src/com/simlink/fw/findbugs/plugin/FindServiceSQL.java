@@ -5,6 +5,7 @@
 package com.simlink.fw.findbugs.plugin;
 
 import edu.umd.cs.findbugs.BugReporter;
+import java.util.Locale;
 import org.apache.bcel.classfile.Constant;
 import org.apache.bcel.classfile.ConstantString;
 
@@ -15,10 +16,11 @@ import org.apache.bcel.classfile.ConstantString;
  */
 public class FindServiceSQL extends AbstractFindbugsPlugin {
 
-    /** Service包. */
+    /** Service包. 
+     * @todo 这里要改成对应项目的内容
+     */
     private static final String[] SERVICE_PACKAGE = {
-        "com.simlink.ehr.service",
-        "com.simlink.emr.service"
+        "cn.com.jsepc.epii.business.prj.service"
     };
     /** SQL语句关键字. 所有字母必须小写.*/
     private static final String[] SQL_KEY = {"select", "from", "where", "like"};
@@ -45,7 +47,7 @@ public class FindServiceSQL extends AbstractFindbugsPlugin {
         boolean is = false;
         if (s != null) {
             for (String key : SQL_KEY) {
-                if (s.toLowerCase().contains(key)) {
+                if (s.toLowerCase(Locale.getDefault()).contains(key)) {
                     is = true;
                     break;
                 }
@@ -64,7 +66,7 @@ public class FindServiceSQL extends AbstractFindbugsPlugin {
                 //ConstantString cs = (ConstantString) c;
                 String s = getStringConstantOperand();
                 if (isSql(s)){
-                    reportBug("SIMLINK_SERVICE_SQL", HIGH_PRIORITY);
+                    reportBug("SPSOFT_SERVICE_SQL", HIGH_PRIORITY);
                 }
             }
         }

@@ -25,7 +25,7 @@ public class FindSysOutPrint extends AbstractFindbugsPlugin {
                 && ("out".equals(getNameConstantOperand()) || "err".equals(getNameConstantOperand()))
                 //&& getDottedMethodSig().equals("out")
                 ) {
-            reportBug("SIMLINK_SYSTEM_OUT_PRINT", NORMAL_PRIORITY);
+            reportBug("SPSOFT_SYSTEM_OUT_PRINT", NORMAL_PRIORITY);
         }
     }
 }
