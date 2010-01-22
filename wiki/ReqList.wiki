@@ -1,5 +1,5 @@
+#summary 需求清单
 #labels Phase-Requirements
-#需求清单
 
 = 需求清单: =
  * 1. 可以方便在Netbeans环境中,使用Findbugs对当前代码及项目进行检查.
