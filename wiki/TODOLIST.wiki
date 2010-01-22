@@ -1,11 +1,7 @@
-#summary One-sentence summary of this page.
+#summary 任务清单
 #labels Phase-Requirements
 
-= Introduction =
+=任务清单=
 
-任务清单
-
-
-= Details =
-
-1.将针对SPSOFT的改为可配置可复用的检查类.
+ # 将针对SPSOFT的改为可配置可复用的检查类.
+ # 制定1.0计划.
