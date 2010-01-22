@@ -1,5 +1,5 @@
 #labels Featured
-#summery SubProject List
+#summery 子项目清单
 = 说明 =
 
 本项目还包含了一系列子项目.
