@@ -1,4 +1,4 @@
-#summary Findbug plug project.
+#summary Findbug plug project说明.
 #labels Phase-Requirements,Featured
 
 = 介绍 =
