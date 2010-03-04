@@ -8,31 +8,31 @@
         Purpose of the document follows.
 -->
 
-<FindbugsPlugin pluginid="com.spsoft.findbugs.plugin"
+<FindbugsPlugin pluginid="com.myc.findbugs.plugin"
                 defaultenabled="true"
-                provider="SPSOFT Framework" >
-    <Detector class="com.spsoft.findbugs.plugin.FindServiceSQL" speed="fast" />
-    <BugPattern abbrev="SPBG" type="SPSOFT_SERVICE_SQL" category="CORRECTNESS" />
+                provider="MYCSOFT Framework" >
+    <Detector class="com.myc.findbugs.plugin.FindServiceSQL" speed="fast" />
+    <BugPattern abbrev="SPBG" type="MYCSOFT_SERVICE_SQL" category="CORRECTNESS" />
     
-    <Detector class="com.spsoft.findbugs.plugin.FindSysOutPrint" speed="fast" />
-    <BugPattern abbrev="SPBG" type="SPSOFT_SYSTEM_OUT_PRINT" category="CORRECTNESS" />
+    <Detector class="com.myc.findbugs.plugin.FindSysOutPrint" speed="fast" />
+    <BugPattern abbrev="SPBG" type="MYCSOFT_SYSTEM_OUT_PRINT" category="CORRECTNESS" />
     
-    <Detector class="com.spsoft.findbugs.plugin.FindExceptionPrint" speed="fast" />
-    <BugPattern abbrev="SPBG" type="SPSOFT_EXCEPTION_PRINT" category="CORRECTNESS" />
+    <Detector class="com.myc.findbugs.plugin.FindExceptionPrint" speed="fast" />
+    <BugPattern abbrev="SPBG" type="MYCSOFT_EXCEPTION_PRINT" category="CORRECTNESS" />
 
-    <Detector class="com.spsoft.findbugs.plugin.FindAccError" speed="moderate" />
-    <BugPattern abbrev="SPBG" type="SPSOFT_PRJACC_UNSUMMED" category="CORRECTNESS" />
+    <Detector class="com.myc.findbugs.plugin.FindAccError" speed="moderate" />
+    <BugPattern abbrev="SPBG" type="MYCSOFT_PRJACC_UNSUMMED" category="CORRECTNESS" />
 
-    <Detector class="com.spsoft.findbugs.plugin.FindMoreReturn" speed="fast" />
-    <BugPattern abbrev="SPBG" type="SPSOFT_MORE_RETURN" category="CORRECTNESS" />
+    <Detector class="com.myc.findbugs.plugin.FindMoreReturn" speed="fast" />
+    <BugPattern abbrev="SPBG" type="MYCSOFT_MORE_RETURN" category="CORRECTNESS" />
 
-    <Detector class="com.spsoft.findbugs.plugin.FindThrowException" speed="fast" />
-    <BugPattern abbrev="SPBG" type="SPSOFT_ERROR_EXCEPTION" category="CORRECTNESS" />
+    <Detector class="com.myc.findbugs.plugin.FindThrowException" speed="fast" />
+    <BugPattern abbrev="SPBG" type="MYCSOFT_ERROR_EXCEPTION" category="CORRECTNESS" />
 
-    <Detector class="com.spsoft.findbugs.plugin.FindMoreLoop" speed="fast" />
-    <BugPattern abbrev="SPBG" type="SPSOFT_MORE_LOOP" category="CORRECTNESS" />
+    <Detector class="com.myc.findbugs.plugin.FindMoreLoop" speed="fast" />
+    <BugPattern abbrev="SPBG" type="MYCSOFT_MORE_LOOP" category="CORRECTNESS" />
 
-    <Detector class="com.spsoft.findbugs.plugin.FindInvokeSqlInLoop" speed="moderate" />
-    <BugPattern abbrev="SPBG" type="SPSOFT_LOOP_SQL" category="PERFORMACE" />
+    <Detector class="com.myc.findbugs.plugin.FindInvokeSqlInLoop" speed="moderate" />
+    <BugPattern abbrev="SPBG" type="MYCSOFT_LOOP_SQL" category="Performace" />
 </FindbugsPlugin>
 

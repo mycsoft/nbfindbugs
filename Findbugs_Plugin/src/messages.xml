@@ -3,16 +3,16 @@
 
 
 <MessageCollection>
-    <BugCode abbrev="SPBG">SPSOFT测试框架</BugCode>
+    <BugCode abbrev="MYC_BG">MYCSOFT测试框架</BugCode>
     
-    <Detector class="com.spsoft.findbugs.plugin.FindServiceSQL">
+    <Detector class="com.myc.findbugs.plugin.FindServiceSQL">
         <Details>
             <![CDATA[
 <p> Service代码中,直接调用SQL语句,会引起扩展性问题.</p>
 ]]>
         </Details>
     </Detector>
-    <BugPattern type="SPSOFT_SERVICE_SQL">
+    <BugPattern type="MYCSOFT_SERVICE_SQL">
         <ShortDescription>在Service中发现SQL语句</ShortDescription>
         <LongDescription>在Service({1})中发现SQL语句</LongDescription>
         <Details>
@@ -23,14 +23,14 @@
     </BugPattern>
     
     
-    <Detector class="com.spsoft.findbugs.plugin.FindSysOutPrint">
+    <Detector class="com.myc.findbugs.plugin.FindSysOutPrint">
         <Details>
             <![CDATA[
 <p>检查代码中是否使用了System.out.println()</p>
 ]]>
         </Details>
     </Detector>
-    <BugPattern type="SPSOFT_SYSTEM_OUT_PRINT">
+    <BugPattern type="MYCSOFT_SYSTEM_OUT_PRINT">
         <ShortDescription>在代码中使用了System.out.println</ShortDescription>
         <LongDescription>在代码({1})中使用了System.out.println</LongDescription>
         <Details>
@@ -40,14 +40,14 @@
         </Details>
     </BugPattern>
     
-    <Detector class="com.spsoft.findbugs.plugin.FindExceptionPrint">
+    <Detector class="com.myc.findbugs.plugin.FindExceptionPrint">
         <Details>
             <![CDATA[
 <p>检查代码中是否将异常直接输出.</p>
 ]]>
         </Details>
     </Detector>
-    <BugPattern type="SPSOFT_EXCEPTION_PRINT">
+    <BugPattern type="MYCSOFT_EXCEPTION_PRINT">
         <ShortDescription>在代码中将异常直接输出.</ShortDescription>
         <LongDescription>在代码({1})中将异常直接输出.</LongDescription>
         <Details>
@@ -58,14 +58,14 @@
 ]]>
         </Details>
     </BugPattern>
-    <Detector class="com.spsoft.findbugs.plugin.FindAccError">
+    <Detector class="com.myc.findbugs.plugin.FindAccError">
         <Details>
             <![CDATA[
 <p>检查代码中使用项目台帐时是否正确触发汇总.</p>
 ]]>
         </Details>
     </Detector>
-    <BugPattern type="SPSOFT_PRJACC_UNSUMMED">
+    <BugPattern type="MYCSOFT_PRJACC_UNSUMMED">
         <ShortDescription>使用项目台帐时,未正确触发汇总.</ShortDescription>
         <LongDescription>在代码({1})中调用了项目台帐的方法,但未触发汇总.</LongDescription>
         <Details>
@@ -76,14 +76,14 @@
 ]]>
         </Details>
     </BugPattern>
-    <Detector class="com.spsoft.findbugs.plugin.FindMoreReturn">
+    <Detector class="com.myc.findbugs.plugin.FindMoreReturn">
         <Details>
             <![CDATA[
 <p> 方法中使用了了过多的return.</p>
 ]]>
         </Details>
     </Detector>
-    <BugPattern type="SPSOFT_MORE_RETURN">
+    <BugPattern type="MYCSOFT_MORE_RETURN">
         <ShortDescription>方法中使用了了过多的return.</ShortDescription>
         <LongDescription>在代码({1})中使用了了过多的return.</LongDescription>
         <Details>
@@ -94,7 +94,7 @@
         </Details>
     </BugPattern>
 
-    <Detector class="com.spsoft.findbugs.plugin.FindThrowException">
+    <Detector class="com.myc.findbugs.plugin.FindThrowException">
         <Details>
             <![CDATA[
 <p> 方法中只能在Service与Action中抛出异常.且只能抛出指定的系统内的异常.
@@ -105,7 +105,7 @@
 ]]>
         </Details>
     </Detector>
-    <BugPattern type="SPSOFT_ERROR_EXCEPTION">
+    <BugPattern type="MYCSOFT_ERROR_EXCEPTION">
         <ShortDescription>异常使用错误</ShortDescription>
         <LongDescription>在代码({1})中使用异常的方式错误.</LongDescription>
         <Details>
@@ -119,7 +119,7 @@
         </Details>
     </BugPattern>
 
-    <Detector class="com.spsoft.findbugs.plugin.FindMoreLoop">
+    <Detector class="com.myc.findbugs.plugin.FindMoreLoop">
         <Details>
             <![CDATA[
 <p> 代码中循环嵌套不可以超过3层.
@@ -127,7 +127,7 @@
 ]]>
         </Details>
     </Detector>
-    <BugPattern type="SPSOFT_MORE_LOOP">
+    <BugPattern type="MYCSOFT_MORE_LOOP">
         <ShortDescription>代码中循环嵌套不可以超过3层.</ShortDescription>
         <LongDescription>在代码({1})中使用了超过3层的循环嵌套.</LongDescription>
         <Details>
@@ -138,7 +138,7 @@
         </Details>
     </BugPattern>
 
-    <Detector class="com.spsoft.findbugs.plugin.FindInvokeSqlInLoop">
+    <Detector class="com.myc.findbugs.plugin.FindInvokeSqlInLoop">
         <Details>
             <![CDATA[
 <p> 在循环中调用数据库连接,严重影响性能.
@@ -146,7 +146,7 @@
 ]]>
         </Details>
     </Detector>
-    <BugPattern type="SPSOFT_LOOP_SQL">
+    <BugPattern type="MYCSOFT_LOOP_SQL">
         <ShortDescription>在循环中调用数据库连接,严重影响性能.</ShortDescription>
         <LongDescription>在代码({1})中,在循环中调用数据库连接,严重影响性能.</LongDescription>
         <Details>
