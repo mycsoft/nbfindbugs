@@ -10,7 +10,7 @@ import org.apache.bcel.classfile.Constant;
 import org.apache.bcel.classfile.ConstantString;
 
 /**
- * 从检查Service中是否有SQL的调用.
+ * 从检查Actio,Form,Service中是否有SQL的调用.
  *
  * @author Ma Yichao
  */
@@ -23,7 +23,9 @@ public class FindServiceSQL extends AbstractFindbugsPlugin {
         super(br);
     }
 
-    /** 检查是否是Service类 */
+    /** 检查是否是Service类 .
+     * 现在加入Action,form等类的判断.
+     */
     private boolean isService() {
         String pkname = getPackageName();
 //        boolean is = false;
@@ -34,8 +36,18 @@ public class FindServiceSQL extends AbstractFindbugsPlugin {
 //            }
 //        }
         //return is;
-        return FindBugsPluginUtils.getLayerByPackageName(pkname)
-                == FindBugsPluginUtils.FW_LAYER_SERVICE;
+        int layerType = FindBugsPluginUtils.getLayerByPackageName(pkname);
+
+        switch (layerType) {
+            case FindBugsPluginUtils.FW_LAYER_SERVICE:
+            case FindBugsPluginUtils.FW_LAYER_SERVICE_IMPL:
+            case FindBugsPluginUtils.FW_LAYER_ACTION:
+            case FindBugsPluginUtils.FW_LAYER_FORM:
+                return true;
+
+            default:
+                return false;
+        }
     }
 
     /** 检查是否是SQL语句. */
@@ -61,7 +73,7 @@ public class FindServiceSQL extends AbstractFindbugsPlugin {
                 //System.out.print("   \"" + getStringConstantOperand() + "\"");
                 //ConstantString cs = (ConstantString) c;
                 String s = getStringConstantOperand();
-                if (isSql(s)){
+                if (isSql(s)) {
                     reportBug("MYCSOFT_SERVICE_SQL", HIGH_PRIORITY);
                 }
             }

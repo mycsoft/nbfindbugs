@@ -27,6 +27,7 @@ public class FindBugsPluginUtils {
     public static final int FW_LAYER_UNKNOWN = 0;
     public static final int FW_LAYER_DAO_IMPL = 10;
     public static final int FW_LAYER_DAO = 20;
+    public static final int FW_LAYER_SERVICE_IMPL = 25;
     public static final int FW_LAYER_SERVICE = 30;
     public static final int FW_LAYER_ACTION = 50;
     public static final int FW_LAYER_FORM = 60;
@@ -36,6 +37,7 @@ public class FindBugsPluginUtils {
     private static final String PK_POST_ACTION = resourceBundle.getString("util.package.post.action");
     private static final String PK_POST_FORM = resourceBundle.getString("util.package.post.form");
     private static final String PK_POST_SERVICE = resourceBundle.getString("util.package.post.service");
+    private static final String PK_POST_SERVICE_IMPL = resourceBundle.getString("util.package.post.service.impl");
     private static final String PK_POST_DAO = resourceBundle.getString("util.package.post.dao");
     private static final String PK_POST_DAO_IMPL = resourceBundle.getString("util.package.post.impl");
     private static final StringBuffer AUTOMETHOD_FLAG = new StringBuffer("$");
@@ -61,6 +63,8 @@ public class FindBugsPluginUtils {
                 frameworkLayer = FW_LAYER_FORM;
             } else if (pkName.endsWith(PK_POST_SERVICE)) {
                 frameworkLayer = FW_LAYER_SERVICE;
+            } else if (pkName.endsWith(PK_POST_SERVICE_IMPL)) {
+                frameworkLayer = FW_LAYER_SERVICE_IMPL;
             } else if (pkName.endsWith(PK_POST_DAO)) {
                 frameworkLayer = FW_LAYER_DAO;
             } else if (pkName.endsWith(PK_POST_DAO_IMPL)) {
