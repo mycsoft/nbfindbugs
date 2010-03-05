@@ -57,7 +57,7 @@ public class FindMoreReturn extends AbstractFindbugsPlugin {
         if (isReturn(seen)) {
             count++;
             if (count > MAX) {
-                reportBug("MYCSOFT_MORE_RETURN", NORMAL_PRIORITY);
+                reportBug("MYCSOFT_MORE_RETURN", LOW_PRIORITY);
             }
         }
 
