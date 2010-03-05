@@ -4,7 +4,7 @@
 
 <MessageCollection>
     <BugCode abbrev="MYC_BG">MYCSOFT测试框架</BugCode>
-    
+
     <Detector class="com.myc.findbugs.plugin.FindServiceSQL">
         <Details>
             <![CDATA[
@@ -13,16 +13,16 @@
         </Details>
     </Detector>
     <BugPattern type="MYCSOFT_SERVICE_SQL">
-        <ShortDescription>在Service中发现SQL语句</ShortDescription>
-        <LongDescription>在Service({1})中发现SQL语句</LongDescription>
+        <ShortDescription>在非Dao中发现SQL语句</ShortDescription>
+        <LongDescription>在类({1})中发现SQL语句</LongDescription>
         <Details>
             <![CDATA[
-<p> Service代码中,直接调用SQL语句,会引起扩展性问题.</p>
+<p> 在Action,Form,Service等非Dao代码中,直接调用SQL语句,会引起扩展性问题.</p>
 ]]>
         </Details>
     </BugPattern>
-    
-    
+
+
     <Detector class="com.myc.findbugs.plugin.FindSysOutPrint">
         <Details>
             <![CDATA[
@@ -39,7 +39,7 @@
 ]]>
         </Details>
     </BugPattern>
-    
+
     <Detector class="com.myc.findbugs.plugin.FindExceptionPrint">
         <Details>
             <![CDATA[
