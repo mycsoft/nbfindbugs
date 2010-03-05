@@ -46,7 +46,7 @@ public class FindAccError extends AbstractFindbugsPlugin {
         //try {
         if (seen == INVOKEVIRTUAL &&
                 ACC_SERVICE.equals(getDottedClassConstantOperand())) {
-            //reportBug("SPSOFT_PRJACC_UNSUMMED", HIGH_PRIORITY);
+            //reportBug("MYCSOFT_PRJACC_UNSUMMED", HIGH_PRIORITY);
             useAccMethod = true;
             hasSumAcc = false;
             if (ACC_SERVICE_SUM_METHOD.equals(getNameConstantOperand())) {
@@ -57,7 +57,7 @@ public class FindAccError extends AbstractFindbugsPlugin {
 
         if (seen == RETURN) {
             if (useAccMethod == true && hasSumAcc == false) {
-                reportBug("SPSOFT_PRJACC_UNSUMMED", HIGH_PRIORITY);
+                reportBug("MYCSOFT_PRJACC_UNSUMMED", HIGH_PRIORITY);
             }
         }
 //        } catch (ClassNotFoundException ex) {

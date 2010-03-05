@@ -62,7 +62,7 @@ public class FindServiceSQL extends AbstractFindbugsPlugin {
                 //ConstantString cs = (ConstantString) c;
                 String s = getStringConstantOperand();
                 if (isSql(s)){
-                    reportBug("SPSOFT_SERVICE_SQL", HIGH_PRIORITY);
+                    reportBug("MYCSOFT_SERVICE_SQL", HIGH_PRIORITY);
                 }
             }
         }

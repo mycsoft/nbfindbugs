@@ -26,7 +26,7 @@ public class FindExceptionPrint extends AbstractFindbugsPlugin{
                     &&
                     "printStackTrace".equals(getNameConstantOperand())
                     ) {
-                reportBug("SPSOFT_EXCEPTION_PRINT", NORMAL_PRIORITY);
+                reportBug("MYCSOFT_EXCEPTION_PRINT", NORMAL_PRIORITY);
             }
         } catch (ClassNotFoundException ex) {
             //Logger.getLogger(FindExceptionPrint.class.getName()).log(Level.SEVERE, null, ex);

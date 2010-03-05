@@ -27,7 +27,7 @@ public class FindMoreReturn extends AbstractFindbugsPlugin {
         //初始化参数
 
         //if (count > MAX) {
-        //reportBug("SPSOFT_MORE_RETURN", NORMAL_PRIORITY);
+        //reportBug("MYCSOFT_MORE_RETURN", NORMAL_PRIORITY);
         //}
 
         count = 0;
@@ -51,13 +51,13 @@ public class FindMoreReturn extends AbstractFindbugsPlugin {
 //            case ARETURN:
 //                count++;
 //            if (count > MAX) {
-//                reportBug("SPSOFT_MORE_RETURN", NORMAL_PRIORITY);
+//                reportBug("MYCSOFT_MORE_RETURN", NORMAL_PRIORITY);
 //            }
 //        }
         if (isReturn(seen)) {
             count++;
             if (count > MAX) {
-                reportBug("SPSOFT_MORE_RETURN", NORMAL_PRIORITY);
+                reportBug("MYCSOFT_MORE_RETURN", NORMAL_PRIORITY);
             }
         }
 

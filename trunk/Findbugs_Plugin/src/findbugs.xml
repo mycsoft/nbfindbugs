@@ -12,27 +12,27 @@
                 defaultenabled="true"
                 provider="MYCSOFT Framework" >
     <Detector class="com.myc.findbugs.plugin.FindServiceSQL" speed="fast" />
-    <BugPattern abbrev="SPBG" type="MYCSOFT_SERVICE_SQL" category="CORRECTNESS" />
+    <BugPattern abbrev="MYC_BG" type="MYCSOFT_SERVICE_SQL" category="CORRECTNESS" />
     
     <Detector class="com.myc.findbugs.plugin.FindSysOutPrint" speed="fast" />
-    <BugPattern abbrev="SPBG" type="MYCSOFT_SYSTEM_OUT_PRINT" category="CORRECTNESS" />
+    <BugPattern abbrev="MYC_BG" type="MYCSOFT_SYSTEM_OUT_PRINT" category="CORRECTNESS" />
     
     <Detector class="com.myc.findbugs.plugin.FindExceptionPrint" speed="fast" />
-    <BugPattern abbrev="SPBG" type="MYCSOFT_EXCEPTION_PRINT" category="CORRECTNESS" />
+    <BugPattern abbrev="MYC_BG" type="MYCSOFT_EXCEPTION_PRINT" category="CORRECTNESS" />
 
     <Detector class="com.myc.findbugs.plugin.FindAccError" speed="moderate" />
-    <BugPattern abbrev="SPBG" type="MYCSOFT_PRJACC_UNSUMMED" category="CORRECTNESS" />
+    <BugPattern abbrev="MYC_BG" type="MYCSOFT_PRJACC_UNSUMMED" category="CORRECTNESS" />
 
     <Detector class="com.myc.findbugs.plugin.FindMoreReturn" speed="fast" />
-    <BugPattern abbrev="SPBG" type="MYCSOFT_MORE_RETURN" category="CORRECTNESS" />
+    <BugPattern abbrev="MYC_BG" type="MYCSOFT_MORE_RETURN" category="CORRECTNESS" />
 
     <Detector class="com.myc.findbugs.plugin.FindThrowException" speed="fast" />
-    <BugPattern abbrev="SPBG" type="MYCSOFT_ERROR_EXCEPTION" category="CORRECTNESS" />
+    <BugPattern abbrev="MYC_BG" type="MYCSOFT_ERROR_EXCEPTION" category="CORRECTNESS" />
 
     <Detector class="com.myc.findbugs.plugin.FindMoreLoop" speed="fast" />
-    <BugPattern abbrev="SPBG" type="MYCSOFT_MORE_LOOP" category="CORRECTNESS" />
+    <BugPattern abbrev="MYC_BG" type="MYCSOFT_MORE_LOOP" category="CORRECTNESS" />
 
     <Detector class="com.myc.findbugs.plugin.FindInvokeSqlInLoop" speed="moderate" />
-    <BugPattern abbrev="SPBG" type="MYCSOFT_LOOP_SQL" category="Performace" />
+    <BugPattern abbrev="MYC_BG" type="MYCSOFT_LOOP_SQL" category="Performace" />
 </FindbugsPlugin>
 

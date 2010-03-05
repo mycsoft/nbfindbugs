@@ -55,7 +55,7 @@ public class FindThrowException extends AbstractFindbugsPlugin {
             lastLine = getDottedClassConstantOperand();
             //System.out.println("[debug2]:"+lastLine);
             if (EXCEPTION_NAME.equals(lastLine)) {
-                //reportBug("SPSOFT_PRJACC_UNSUMMED", HIGH_PRIORITY);
+                //reportBug("MYCSOFT_PRJACC_UNSUMMED", HIGH_PRIORITY);
                 lastIsException = true;
             }
         } else {
@@ -70,7 +70,7 @@ public class FindThrowException extends AbstractFindbugsPlugin {
                      * 这个异常是不需要进行代码检查的.因此,要想办法排除掉这类方法中的检查.
                     */
                     if (!isJVMAutoCreateMethod(getMethod())){
-                        reportBug("SPSOFT_ERROR_EXCEPTION", NORMAL_PRIORITY);
+                        reportBug("MYCSOFT_ERROR_EXCEPTION", NORMAL_PRIORITY);
                     }
                 }
             }

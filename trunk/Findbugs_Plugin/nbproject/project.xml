@@ -6,10 +6,11 @@
             <name>Findbugs_Plugin</name>
             <minimum-ant-version>1.6.5</minimum-ant-version>
             <source-roots>
+                <root id="src.pluginConfig.dir" name="config"/>
                 <root id="src.dir"/>
             </source-roots>
             <test-roots>
-                <root id="test.src.dir"/>
+                <root id="test.test.dir" name="test"/>
             </test-roots>
         </data>
     </configuration>
