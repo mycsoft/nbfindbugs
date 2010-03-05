@@ -4,6 +4,7 @@
  */
 package com.myc.findbugs.plugin;
 
+import java.util.ResourceBundle;
 import org.apache.bcel.classfile.Method;
 
 /**
@@ -11,9 +12,17 @@ import org.apache.bcel.classfile.Method;
  * @author MaYichao
  */
 public class FindBugsPluginUtils {
+
     //TODO 配置信息要改为配置文件,以便于扩展.
+    /** 资源配置对象 */
+    private static final ResourceBundle resourceBundle =
+            ResourceBundle.getBundle(
+            //FindBugsPluginUtils.class.getResource(
+            //"com.myc.findbugs.plugin.config").getFile()
+            "com_myc_findbugs_plugin_config"
+            );
     /** 顶层包 */
-    private static final String TOP_PACKAGE = "cn.com.jsepc";
+    private static final String TOP_PACKAGE = resourceBundle.getString("util.package.top");
     /** 层类型 */
     public static final int FW_LAYER_UNKNOWN = 0;
     public static final int FW_LAYER_DAO_IMPL = 10;
@@ -22,14 +31,22 @@ public class FindBugsPluginUtils {
     public static final int FW_LAYER_ACTION = 50;
     public static final int FW_LAYER_FORM = 60;
     public static final int FW_LAYER_UTIL = 100;
+    
     /** 层包后缀常量 */
-    private static final String PK_POST_ACTION = "action";
-    private static final String PK_POST_FORM = "form";
-    private static final String PK_POST_SERVICE = "service";
-    private static final String PK_POST_DAO = "dao";
-    private static final String PK_POST_DAO_IMPL = "dao.impl";
-
+    private static final String PK_POST_ACTION = resourceBundle.getString("util.package.post.action");
+    private static final String PK_POST_FORM = resourceBundle.getString("util.package.post.form");
+    private static final String PK_POST_SERVICE = resourceBundle.getString("util.package.post.service");
+    private static final String PK_POST_DAO = resourceBundle.getString("util.package.post.dao");
+    private static final String PK_POST_DAO_IMPL = resourceBundle.getString("util.package.post.impl");
     private static final StringBuffer AUTOMETHOD_FLAG = new StringBuffer("$");
+
+    /**
+     * 顶层包
+     * @return the TOP_PACKAGE
+     */
+    public static String getTOP_PACKAGE() {
+        return TOP_PACKAGE;
+    }
 
     private FindBugsPluginUtils() {
     }
@@ -37,7 +54,7 @@ public class FindBugsPluginUtils {
     /** 根据包确定一个类在框架中的层次 */
     public static int getLayerByPackageName(String pkName) {
         int frameworkLayer = FW_LAYER_UNKNOWN;
-        if (pkName != null && pkName.startsWith(TOP_PACKAGE)) {
+        if (pkName != null && pkName.startsWith(getTOP_PACKAGE())) {
             if (pkName.endsWith(PK_POST_ACTION)) {
                 frameworkLayer = FW_LAYER_ACTION;
             } else if (pkName.endsWith(PK_POST_FORM)) {

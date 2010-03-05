@@ -70,7 +70,7 @@ public class FindInvokeSqlInLoop extends AbstractFindbugsPlugin {
                     }
                 }
             }
-        //reportBug("SPSOFT_PRJACC_UNSUMMED", HIGH_PRIORITY);
+        //reportBug("MYCSOFT_PRJACC_UNSUMMED", HIGH_PRIORITY);
         //lastIsException = true;
 
         }
@@ -85,7 +85,7 @@ public class FindInvokeSqlInLoop extends AbstractFindbugsPlugin {
                  */
                 
 
-                reportBug("SPSOFT_LOOP_SQL", HIGH_PRIORITY,lastInvoikPC);
+                reportBug("MYCSOFT_LOOP_SQL", HIGH_PRIORITY,lastInvoikPC);
                 lastInvoikPC = -1;
             }
         }

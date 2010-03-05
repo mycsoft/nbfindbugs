@@ -30,7 +30,7 @@ public class FindMoreLoop extends AbstractFindbugsPlugin {
         //初始化参数
 
         //if (count > MAX) {
-        //reportBug("SPSOFT_MORE_RETURN", NORMAL_PRIORITY);
+        //reportBug("MYCSOFT_MORE_RETURN", NORMAL_PRIORITY);
         //}
 
         count = 0;
@@ -57,7 +57,7 @@ public class FindMoreLoop extends AbstractFindbugsPlugin {
                     loopend = current;
                     count++;
                     if (count > MAX) {
-                        reportBug("SPSOFT_MORE_LOOP", HIGH_PRIORITY);
+                        reportBug("MYCSOFT_MORE_LOOP", HIGH_PRIORITY);
                     }
                 }
             }

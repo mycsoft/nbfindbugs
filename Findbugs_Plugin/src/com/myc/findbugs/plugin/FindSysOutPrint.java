@@ -25,7 +25,7 @@ public class FindSysOutPrint extends AbstractFindbugsPlugin {
                 && ("out".equals(getNameConstantOperand()) || "err".equals(getNameConstantOperand()))
                 //&& getDottedMethodSig().equals("out")
                 ) {
-            reportBug("SPSOFT_SYSTEM_OUT_PRINT", NORMAL_PRIORITY);
+            reportBug("MYCSOFT_SYSTEM_OUT_PRINT", NORMAL_PRIORITY);
         }
     }
 }
