@@ -37,11 +37,14 @@
                                 logs for error messages.
                             </div>
                         </logic:notPresent>
+                        <div id="loading"></div>
+                        
                     </td>
                 </tr>
                 <tr>
                     <td height="300" align="center">
                         <jsp:doBody/>
+                        <div id="debug_message" style="color: red"></div>
                     </td>
                 </tr>
                 <tr>
