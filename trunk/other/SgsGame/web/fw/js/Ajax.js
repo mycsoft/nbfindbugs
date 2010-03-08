@@ -5,7 +5,7 @@ function log(message) {
     debugDiv = document.getElementById("debug_message")
     //alert(debugDiv)
     if (debugDiv == null) {
-    //alert(message);
+        //alert(message);
     }else{
         debugDiv.innerHTML+='<br>[调试]:'+message;
     }
@@ -53,6 +53,25 @@ Ajax.getResponse=function() {
     }
 }
 
+/**
+ * Ajax请求对象
+ */
+function AjaxRequest(method,url,callbackMethod) {
+    this.method = method;
+    this.url = url;
+    this.callbackMethod = callbackMethod;
+}
+
+/**
+ * 队列
+ */
+function Queue() {
+    this.list = new A;
+    this.put = function(p){
+        this.list.a
+    }
+}
+var ajaxList = new Array
     
 //};
 
@@ -75,17 +94,22 @@ AjaxUpdater.initialize = function() {
      * 更新
      */
 AjaxUpdater.update=function(method,service,callback) {
-    if (callback == undefined || callback == "") {
-        callback = this.onResponse;
-    }
-    onResponse=function() {
-        if (Ajax.checkReadyState('loading') == 200) {
-            this.isUpdating = false;
-            callback();
+    //如果当前有Ajax请求正在进行中,则将此请求加入队列.
+    if (this.isUpdating) {
+        
+    }else{
+        if (callback == undefined || callback == "") {
+            callback = this.onResponse;
         }
+        onResponse=function() {
+            if (Ajax.checkReadyState('loading') == 200) {
+                this.isUpdating = false;
+                callback();
+            }
+        }
+        Ajax.makeRequest(method,service,onResponse);
+        this.isUpdating = true;
     }
-    Ajax.makeRequest(method,service,onResponse);
-    this.isUpdating = true;
 }
 
 /**
