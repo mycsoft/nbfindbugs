@@ -13,7 +13,10 @@
 
             List<Player> players = gm.getPlayers();
             pageContext.setAttribute("players", players);
-            pageContext.setAttribute("player",players.get(id));
+            Player player = players.get(id);
+            pageContext.setAttribute("player",player);
+            pageContext.setAttribute("handCardCount",player.getHandCards().size());
+            //List<Card.HandCard> hcs =
 %>
 <table width="100%">
     <tbody>
@@ -27,7 +30,7 @@
             <td class="label">血量:</td>
             <td class="value">3/4</td>
             <td class="label">手牌数:</td>
-            <td class="value">3</td>
+            <td class="value">${handCardCount}</td>
         </tr>
         <tr>
             <td class="label">武器:</td>

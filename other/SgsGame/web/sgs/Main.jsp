@@ -14,7 +14,7 @@
 <%@ page import="java.util.*, com.myc.game.sgs.*" %>
 <%!
     /** 初始化游戏 */
-    SgsGameManager initGame() {
+    private SgsGameManager initGame() {
         SgsGameManager gm = new SgsGameManager();
         for (int idx = 0; idx < 4; idx++) {
             Player player = new Player();
@@ -32,14 +32,15 @@
             SgsGameManager gm = (SgsGameManager) session.getAttribute("com.myc.game.sgs.SgsGameManager");
             //如果没有,则初始化游戏
             if (gm == null) {
-                gm = initGame();
-                session.setAttribute("com.myc.game.sgs.SgsGameManager", gm);
+            gm = initGame();
+            session.setAttribute("com.myc.game.sgs.SgsGameManager", gm);
             }
 
             //List<Player> players = gm.getPlayers();
             //pageContext.setAttribute("players", players);
 
             pageContext.setAttribute("userIdx", 3);
+            session.setAttribute("com.myc.game.sgs.userIdx", 3);
 
 %>
 <style>
@@ -82,10 +83,21 @@
         font-size: smaller;
         text-align: center;
     }
+    #handCardList_Div{
+        top: 0;
+        left: 30%;
+        width: 30%;
+        height: 100%;
+        border: 1 solid gray;
+        position: absolute;
+    }
 </style>
 <sgs:DefaultView>
-
-    <div id="sgsRoom"
+    <div id="toolbar"></div>
+    <div id="panel-basic" class="container">
+    </div>
+    <%--
+    <div id="sgsRoom" class="container"
          style="position: relative;left: 0;top: 0;width: 1000px;height: 600px;border: solid gray;">
         <div id="player_div_1" class="play_div" style=" left: 0;top: 300;">
             player1
@@ -152,42 +164,18 @@
             </div>
         </div>
     </div>
-</sgs:DefaultView>
-<script>
-    /**
-     * 更新玩家信息
-     * @param index 玩家的相对位置号.
-     * @param idx 玩家的相对当前玩家的位置号.
-     */
-    function updatePlayer(idx,index) {
-        log("更新玩家信息"+ idx + "|" + index);
-        Ext.Ajax.request({
-            url : "PlayerBox.jsp?id="+index,
-            callback : function(options, success, response) {
-                reflushPlayer(idx, response.responseText);
-            }
-        })
+    --%>
 
-    }
+    <script type="text/javascript" src="js/sgs_main.js" charset="utf-8"></script>
+    <script>
+        init(${userIdx})
 
-    /**
-     * 刷新玩家区
-     */
-    function reflushPlayer(index,content) {
-        log("刷新玩家区"+index);
-        var div = "player_div_"+index;
-        document.getElementById(div).innerHTML=content;
-    }
-    /**
-     * 更新所有玩家
-     */
-    function updateAllPlayers() {
-        max = 4;
-        for (i = 0;i < max ; i ++){
-            updatePlayer(i,(i+${userIdx})%(max));
+        //定时刷新
+        /**
+         * 定时刷新
+         */
+        function timeOutReflush() {
+            //Ext.
         }
-    }
-
-    
-    updateAllPlayers();
-</script>
+    </script>
+</sgs:DefaultView>

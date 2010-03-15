@@ -19,6 +19,9 @@
     </global-forwards>
 
     <action-mappings>
+        <action path="/exitRoom" type="com.myc.game.sgs.action.ExitRoomAction">
+            <forward name="success" path="/Welcome.do"/>
+        </action>
         <action path="/Welcome" forward="/fw/Login.jsp"/>
         <action path="/Building" forward="/fw/OnBuilding.jsp"/>
         <action path="/NoPage" forward="/fw/error/NoPage.jsp"/>

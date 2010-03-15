@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : config.xml
+    Created on : 2010年3月9日, 下午12:56
+    Author     : MaYichao
+    Description:
+        Purpose of the document follows.
+-->
+
+<SGS_CONFIG>
+    <HAND_CARD_TEMPLATES>
+        <HAND_CARD_TEMPLATE name="杀" id="kill">
+            
+        </HAND_CARD_TEMPLATE>
+        <HAND_CARD_TEMPLATE name="桃" id="blood">
+
+        </HAND_CARD_TEMPLATE>
+        <HAND_CARD_TEMPLATE name="闪" id="swing">
+
+        </HAND_CARD_TEMPLATE>
+    </HAND_CARD_TEMPLATES>
+    <HAND_CARDS>
+        <HAND_CARD kind="red" number="1" type="kill"/>
+        <HAND_CARD kind="red" number="2" type="blood"/>
+        <HAND_CARD kind="red" number="3" type="swing"/>
+        <HAND_CARD kind="red" number="4" type="kill"/>
+        <HAND_CARD kind="red" number="5" type="kill"/>
+    </HAND_CARDS>
+</SGS_CONFIG>
